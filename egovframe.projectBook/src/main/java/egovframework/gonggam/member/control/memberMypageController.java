@@ -1,4 +1,4 @@
-package egovframework.gonggam.memberbookcontrol;
+package egovframework.gonggam.member.control;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/member")
-public class booklistController {
+public class memberMypageController {
 	
-	@GetMapping("/booklist.do")
-	public String booklist() {
-		return "member.book.booklist";
+	@GetMapping("/mypage.do")
+	public String mypage() {
+		return "member.mypage.mystatus";
 	}
 
 }

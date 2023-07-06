@@ -18,7 +18,7 @@
           <a class="nav-link" href="/mem/bookloan.do">대여관리</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="/member/mypage.do">회원리스트</a>
+          <a class="nav-link" href="/member/mypage.do">마이페이지</a>
         </li>
 
     </div>

@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
 public class EgovSampleExcepHndlr implements ExceptionHandler {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EgovSampleExcepHndlr.class);
-
+	
 	/**
 	* @param ex
 	* @param packageName

@@ -1,4 +1,4 @@
-package egovframework.gonggam.adminmembercontrol;
+package egovframework.gonggam.admin.member.control;
 
 import java.util.Locale;
 
