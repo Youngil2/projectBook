@@ -16,11 +16,14 @@
         <property name="password" value="1234"/>
     </bean>
     
+  
+    
     <!-- sqlSessionTemplate는 DB에 개별적으로 쿼리를 실행시키는 객체 -->
    		<bean id="sst" class="org.mybatis.spring.SqlSessionTemplate">
-   			<constructor-arg index="0" ref="sqlSessionFactory"/>
+   			<constructor-arg index="0" ref="sqlSession"/>
    		</bean>    
 
+		
       
         
     <!-- hsql (테스트용 메모리 DB)

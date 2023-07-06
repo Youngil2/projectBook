@@ -1,15 +1,23 @@
 package egovframework.gonggam.admin.book_info.control;
 
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import egovframework.gonggam.admin.book_info.service.BookService;
 
 
 @Controller
 @RequestMapping("/admin")
 public class BookInfoController {
-
+	
+	@Autowired
+	BookService bs;
 	
 //도서목록조회
 	@GetMapping("/findAllBookInfo.do")
@@ -29,8 +37,13 @@ public class BookInfoController {
 		return "admin.book.book_info_regist";
 	}
 	@PostMapping("/addBookInfo.do")
-	public String adminAddBookInfo() {
+	public String adminAddBookInfo(@RequestParam Map<String,Object> map) {
+		String bookid = this.bs.create(map);
+		if(bookid == null) {
 		return "admin.book.book_info_regist";
+		}else {
+			return "admin.book.book_list";
+		}
 	}
 	
 //도서 수정

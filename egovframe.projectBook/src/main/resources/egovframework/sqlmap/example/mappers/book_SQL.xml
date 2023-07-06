@@ -5,19 +5,20 @@
 	여러개의 쿼리가 만들어지기때문에 구분할 명칭이 필요 -->
 <mapper namespace="book">
 
-	<resultMap type="" id="sampleVO">
+
+<!--  	<resultMap type="" id="BookVO">
 		
-	</resultMap>
+	</resultMap>  -->
 <!-- useGeneratedKeys = "true" 라면 insert 쿼리 실행 후 생성된 primary key(PK)를 keyProperty속성에 저장 -->
 <!-- insert 실행 후 자동증가로 생성된 book_id 컬럼의 값을 가져온다. 필요한 경우에만 쓰면 된다. -->
-	<insert id="insert" parameterType="hashMap" useGeneratedKeys="true" keyProperty="book_id">
 	<!-- values 는 hashMap 에 있는 key 값을 넣는것이다 . 
 	ex) 제목을 TTL 이라고 했으면 values 는 #{TTL}로 해야한다.  -->
+	<insert id="insert" parameterType="hashMap" useGeneratedKeys="true" keyProperty="BOOK_IDNTF_NO">
 		<![CDATA[
-			insert into book(BOOK_NM, BOOK_DTL_EXPLN, PUBLIS_NM,BOOK_NO,AUT_NM,BOOK_LOAN_PSBLTY_CD) values(#{BOOK_NM}, #{BOOK_DTL_EXPLN}, #{PUBLIS_NM},#{BOOK_NO},#{AUT_NM},#{BOOK_LOAN_PSBLTY_CD})
+			insert into book_info(BOOK_NM, BOOK_DTL_EXPLN, PUBLIS_NM,BOOK_INFO_REG_DT,BOOK_NO,AUT_NM,BOOK_LOAN_PSBLTY_CD) values(#{BOOK_NM}, #{BOOK_DTL_EXPLN}, #{PUBLIS_NM},#{BOOK_INFO_REG_DT},#{BOOK_NO},#{AUT_NM},#{BOOK_LOAN_PSBLTY_CD})
 		]]>
 	</insert>
-	<select id="select_detail" parameterType="int" resultType="hashMap">
+<!-- 	<select id="select_detail" parameterType="int" resultType="hashMap">
 		<![CDATA[
 			select * from book where BOOK_IDNTF_NO=#{BOOK_IDNTF_NO}
 		]]>
@@ -27,7 +28,7 @@
 	<![CDATA[
 			select * from book order by insert_date desc
 		]]>
-	</select>
+	</select> -->
 	
 <!-- 	<update id="update" parameterType="hashMap">
 	<![CDATA[

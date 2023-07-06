@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <!--도서목록조회  -->
 <div class="body">
-<p><a href="/create">도서등록</a></p>
+<p><a href="/admin/addBookInfo.do">도서등록</a></p>
 <h1>도서목록</h1>
 <table>
 	<tr>
@@ -20,7 +20,7 @@
 	</tr>
 	</c:forEach>
 </table>
-[출처] Spring(book) 최종본|작성자 html java공부방
+
 
 
 </div>
