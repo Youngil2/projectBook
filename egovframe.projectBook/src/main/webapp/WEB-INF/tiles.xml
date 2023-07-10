@@ -7,12 +7,12 @@
 
 	
 	<definition name="*.*.*" template="/WEB-INF/jsp/tiles/classic.jsp">
-		<put-attribute name="header" value="/WEB-INF/jsp/{1}/tiles/header.jsp" />
-		<put-attribute name="side" value="/WEB-INF/jsp/{1}/{2}/side.jsp" />
+		<put-attribute name="header" value="/WEB-INF/jsp/{1}/{2}/tiles/header.jsp" />
+		<put-attribute name="side" value="/WEB-INF/jsp/{1}/{2}/tiles/side.jsp" />
 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/jsp/{1}/tiles/footer.jsp" />
-	</definition>		
-	
+		<put-attribute name="footer" value="/WEB-INF/jsp/{1}/{2}/tiles/footer.jsp" />
+	</definition>	
+
 
 
 
